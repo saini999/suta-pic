@@ -28,5 +28,5 @@
 #define sutaDelay 5000 //ms
 #define blinkDelay 500 //ms
 #define phaseDelay 10 //ms
-#define anglemin 60 //digrees
+#define anglemin 60 //digrees //phase angle of 3phase supply is 120° but due to fluctuations and timer limitations we use a range
 #define anglemax 150 //digrees
