@@ -1,9 +1,9 @@
 
-ROM used:   895/4096 (22%)
-            895/4096 (22%) including unused fragments
+ROM used:   869/4096 (21%)
+            869/4096 (21%) including unused fragments
 
             0.2 Average locations per line
-            1.3 Average locations per statement
+            1.2 Average locations per statement
 
 RAM used:   39/512 (8%) at main() level
             72/512 (14%) worst case
@@ -13,8 +13,8 @@ Stack size: 16
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-  177    98  14  suta.c
-   31     0   0  suta.h
+  187    98  14  suta.c
+   33     0   0  suta.h
   977     0   0  ..\..\..\..\Program Files (x86)\PICC\Devices\16LF1574.h
    61     0   0  ..\..\..\..\Program Files (x86)\PICC\Drivers\float.h
  2228   258  36  ..\..\..\..\Program Files (x86)\PICC\Drivers\math.h
@@ -24,7 +24,7 @@ Lines Stmts  %   Files
    28     0   0  ..\..\..\..\Program Files (x86)\PICC\Drivers\ctype.h
    37     0   0  ..\..\..\..\Program Files (x86)\PICC\Drivers\stdio.h
 ----- -----
- 5360   715 Total
+ 5372   715 Total
 
 Page ROM  %  RAM    Vol Diff  Functions:
 ---- --- --- ---    --- ----  ----------
@@ -32,44 +32,42 @@ Page ROM  %  RAM    Vol Diff  Functions:
  Inline         2             @ITOF
 0    117  13   15             @MULFF
  Inline        16             @DIVFF
-0      4   0    0     17  1.3  TIMER0_isr
-0      6   1    0     17  1.3  TIMER2_isr
+0      7   1    0     27  1.5  TIMER0_isr
  Inline         1     40  1.7  readADC
 0     14   2    1     80  2.4  motor
 0     14   2    1     80  2.4  ok
 0     14   2    1     80  2.4  fault
  Inline         0     74  1.6  stop
-0    380  42    6    423  6.4  getPhq
+0    379  44    6    423  6.4  getPhq
  Inline         1     39  1.8  getsutanum
- Inline         3      5  1.0  @DIV88
-0     37   4    0    262  2.8  runSetup
+ Inline         3             @DIV88
+0     36   4    0    287  2.8  runSetup
  Inline         2    140  3.9  okblink
  Inline         0    160  3.1  updateState
  Inline         2    119  3.8  runSuta
- Inline         2     56  2.1  getPhase
- Inline         0     74  1.6  runNormal
-0    170  19    2    315  4.6  doLoop
-0    101  11    0     38  1.2  MAIN
+ Inline         0     94  1.7  runNormal
+0    158  18    2    321  4.6  doLoop
+0    101  12    0     38  1.2  MAIN
  Inline         0             @cinit1
 
 Program metrics:
-    Functions               18
+    Functions               15
     Statements              715
-    Comments                1002
-    Volume (V)              3721
-    Difficulty (D)          45.7
-    Effort to implement (E) 170082
-    Time to implement (T)   2 hours, 37 minutes
+    Comments                1018
+    Volume (V)              3588
+    Difficulty (D)          41.0
+    Effort to implement (E) 147040
+    Time to implement (T)   2 hours, 16 minutes
     Est Delivered Bugs (B)  1
-    Cyclomatic Complexity   12
-    Maintainability (MI)    41
+    Cyclomatic Complexity   11
+    Maintainability (MI)    89
 
  Segment     Used  Free
 -----------  ----  ----
 00000-00002     3  0  
 00003-00003     0  1  
-00004-00026    35  0  
-00027-007FF   857  1152  
+00004-0001D    26  0  
+0001E-007FF   840  1178  
 00800-00FFF     0  2048  
 
 

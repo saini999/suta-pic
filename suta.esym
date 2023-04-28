@@ -1,9 +1,9 @@
-D G "__PCM__" 0 173 ""5.112""
-D G "__DEVICE__" 0 173 "1574"
-D G "__DATE__" 0 173 ""28-Apr-23""
-D G "__TIME__" 0 173 ""16:11:17""
-D G "_UNICODE" 0 173 ""?""
-D G "__EVAL" 0 173 ""?"" "Standard Header file for the PIC16LF1574 device ////////////////"
+D G "__PCM__" 0 188 ""5.112""
+D G "__DEVICE__" 0 188 "1574"
+D G "__DATE__" 0 188 ""28-Apr-23""
+D G "__TIME__" 0 188 ""17:25:02""
+D G "_UNICODE" 0 188 ""?""
+D G "__EVAL" 0 188 ""?"" "Standard Header file for the PIC16LF1574 device ////////////////"
 c L "set_tris_a" 2 3 16 "FUNCTION"
 F N "set_tris_a" 2 50 ""
 V L "value" 2 50 "int8" `55 
@@ -1472,10 +1472,12 @@ D G "bypass" 1 23 "PIN_A3"
 D G "faultout" 1 24 "PIN_C0"
 D G "okout" 1 25 "PIN_C1"
 D G "motorout" 1 26 "PIN_C2"
-D G "timeCal" 1 27 "1953.125"
-D G "sutaDelay" 1 28 "50" "*100ms"
-D G "blinkDelay" 1 29 "5" "*100ms"
-D G "phaseDelay" 1 30 "10"
+D G "timeCal" 1 27 "1000" "time recorded in ms / timeCal"
+D G "sutaDelay" 1 28 "5000" "ms"
+D G "blinkDelay" 1 29 "500" "ms"
+D G "phaseDelay" 1 30 "10" "ms"
+D G "anglemin" 1 31 "60" "digrees"
+D G "anglemax" 1 32 "150" "digrees"
 D G "_FLOAT" 3 15 ""
 D G "FLT_RADIX" 3 18 "2"
 D G "FLT_MANT_DIG" 3 19 "24" "# of bits in mantissa"
@@ -2169,44 +2171,42 @@ V G "okstate" 0 17 "int1" `1184
 V G "blink" 0 17 "int1" `1185 
 F N "TIMER0_isr" 0 21 ""
 F G "TIMER0_isr" 0 22 "void()" `1186 
-F N "TIMER2_isr" 0 27 ""
-F G "TIMER2_isr" 0 28 "void(int8 pin)" `1187 
-F N "readADC" 0 33 ""
-V L "pin" 0 33 "int8" `1189 
-F G "readADC" 0 33 "int8(int8 pin,int8 readADC)" `1188 
-F N "motor" 0 38 ""
-V L "state" 0 38 "int8" `1191 
-F G "motor" 0 38 "void(int8 state,int8 readADC)" `1190 
-F N "ok" 0 45 ""
-V L "state" 0 45 "int8" `1193 
-F G "ok" 0 45 "void(int8 state,int8 readADC)" `1192 
-F N "fault" 0 52 ""
-V L "state" 0 52 "int8" `1195 
-F G "fault" 0 52 "void(int8 state)" `1194 
-F N "stop" 0 61 ""
-F G "stop" 0 61 "void()" `1196 
-F N "getPhq" 0 68 ""
-F G "getPhq" 0 68 "void()" `1197 
-F N "getsutanum" 0 88 ""
-F G "getsutanum" 0 88 "void(int8 ,int8 )" `1198 
-F N "runSetup" 0 92 ""
-F G "runSetup" 0 92 "void()" `1202 
-C L "runSetup" 0 96 1 "FUNCTION"
-C L "runSetup" 0 96 1 "FUNCTION"
-F N "okblink" 0 109 ""
-F G "okblink" 0 109 "void()" `1203 
-F N "updateState" 0 119 ""
-F G "updateState" 0 119 "void()" `1204 
-F N "runSuta" 0 131 ""
-F G "runSuta" 0 131 "void()" `1205 
-F N "getPhase" 0 140 ""
-F G "getPhase" 0 140 "void()" `1206 
-F N "runNormal" 0 146 ""
-F G "runNormal" 0 146 "void()" `1207 
-F N "doLoop" 0 153 ""
-F G "doLoop" 0 153 "void()" `1208 
-F N "MAIN" 0 167 ""
-F G "MAIN" 0 168 "void()" `1209 
+C L "readADC" 0 26 3 "FUNCTION"
+F N "readADC" 0 34 ""
+V L "pin" 0 34 "int8" `1188 
+F G "readADC" 0 34 "int8(int8 pin)" `1187 
+F N "motor" 0 39 ""
+V L "state" 0 39 "int8" `1190 
+F G "motor" 0 39 "void(int8 state)" `1189 
+F N "ok" 0 46 ""
+V L "state" 0 46 "int8" `1192 
+F G "ok" 0 46 "void(int8 state)" `1191 
+F N "fault" 0 53 ""
+V L "state" 0 53 "int8" `1194 
+F G "fault" 0 53 "void(int8 state)" `1193 
+F N "stop" 0 62 ""
+F G "stop" 0 62 "void()" `1195 
+F N "getPhq" 0 69 ""
+F G "getPhq" 0 69 "void()" `1196 
+F N "getsutanum" 0 89 ""
+F G "getsutanum" 0 89 "void()" `1197 
+F N "runSetup" 0 93 ""
+F G "runSetup" 0 93 "void()" `1201 
+C L "runSetup" 0 26 2 "FUNCTION"
+C L "runSetup" 0 26 1 "FUNCTION"
+F N "okblink" 0 114 ""
+F G "okblink" 0 114 "void()" `1202 
+F N "updateState" 0 124 ""
+F G "updateState" 0 124 "void()" `1203 
+F N "runSuta" 0 136 ""
+F G "runSuta" 0 136 "void()" `1204 
+C L "runNormal" 0 26 3 "FUNCTION"
+F N "runNormal" 0 151 ""
+F G "runNormal" 0 151 "void()" `1205 
+F N "doLoop" 0 159 ""
+F G "doLoop" 0 159 "void()" `1206 
+F N "MAIN" 0 177 ""
+F G "MAIN" 0 178 "void()" `1207 
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep" 0 0

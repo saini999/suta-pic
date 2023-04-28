@@ -1,0 +1,5 @@
+Compiling C:\Users\harno\Desktop\pic16lf1574\suta on 28-Apr-23 at 17:25
+>>> Warning 202 "C:\Users\harno\Desktop\pic16lf1574\suta.c" Line 11(48,58): Variable never used:   timerPhase
+      Memory usage:   ROM=21%      RAM=8% - 14%
+      0 Errors,  1 Warnings.
+Build Successful.

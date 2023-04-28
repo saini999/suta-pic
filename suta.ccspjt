@@ -19,13 +19,13 @@ forcecoff=0
 [ProjectLog]
 Days=1
 D1=28-04-2023
-D1_L=20
+D1_L=28
 D1_L1=[42568]Project Opened.
 D1_L2=[42579]Started Editing.
 D1_L3=[43040]Stopped Editing.
-TotalEdit=134
+TotalEdit=164
 TotalDebug=0
-D1_E=134
+D1_E=164
 D1_D=0
 D1_L4=[43042]Started Editing.
 D1_L5=[43801]Stopped Editing.
@@ -44,18 +44,26 @@ D1_L17=[55242]Stopped Editing.
 D1_L18=[55291]Started Editing.
 D1_L19=[58523]Stopped Editing.
 D1_L20=[58523]Project Closed.
+D1_L21=[58545]Project Opened.
+D1_L22=[58576]Started Editing.
+D1_L23=[60019]Stopped Editing.
+D1_L24=[60019]Project Closed.
+D1_L25=[62375]Project Opened.
+D1_L26=[62432]Started Editing.
+D1_L27=[62727]Stopped Editing.
+D1_L28=[62727]Project Closed.
 
 [Opened Files]
 1=suta.c
-t1=117
+t1=53
 2=suta.h
-t2=15
+t2=53
 Count=2
 [suta.c]
 Type=4
 
 [defines]
-buildcount=73
+buildcount=93
 [Units]
 Count=1
 1=suta (main)

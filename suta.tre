@@ -2,17 +2,19 @@
    ÃÄMAIN  0/101  Ram=0
    ³  ÃÄ@cinit1  (Inline)  Ram=0
    ³  ÃÄ@cinit2  (Inline)  Ram=0
-   ³  ÃÄrunSetup  0/37  Ram=0
-   ³  ³  ÀÄgetPhq  0/380  Ram=6
+   ³  ÃÄrunSetup  0/36  Ram=0
+   ³  ³  ÃÄmotor  0/14  Ram=1
+   ³  ³  ÃÄok  0/14  Ram=1
+   ³  ³  ÃÄfault  0/14  Ram=1
+   ³  ³  ÀÄgetPhq  0/379  Ram=6
    ³  ³     ÃÄ@ITOF  (Inline)  Ram=2
    ³  ³     ÃÄ@DIVFF  (Inline)  Ram=16
    ³  ³     ÃÄ@MULFF  0/117  Ram=15
    ³  ³     ÃÄ@MULFF  0/117  Ram=15
    ³  ³     ÀÄ@SFTOI  (Inline)  Ram=4
-   ³  ÀÄdoLoop  0/170  Ram=2
-   ³     ÃÄgetPhase  (Inline)  Ram=2
-   ³     ³  ÀÄgetPhq  0/380  Ram=6
-   ³     ³     ÀÄ*
+   ³  ÀÄdoLoop  0/158  Ram=2
+   ³     ÃÄgetPhq  0/379  Ram=6
+   ³     ³  ÀÄ*
    ³     ÃÄgetsutanum  (Inline)  Ram=1
    ³     ³  ÃÄreadADC  (Inline)  Ram=1
    ³     ³  ÀÄ@DIV88  (Inline)  Ram=3
@@ -32,5 +34,4 @@
    ³        ÃÄok  0/14  Ram=1
    ³        ÃÄfault  0/14  Ram=1
    ³        ÀÄmotor  0/14  Ram=1
-   ÃÄTIMER0_isr  0/4  Ram=0
-   ÀÄTIMER2_isr  0/6  Ram=0
+   ÀÄTIMER0_isr  0/7  Ram=0

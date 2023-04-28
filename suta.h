@@ -24,7 +24,9 @@
 #define faultout   PIN_C0
 #define okout   PIN_C1
 #define motorout   PIN_C2
-#define timeCal 1953.125
-#define sutaDelay 50 //*100ms
-#define blinkDelay 5 //*100ms
-#define phaseDelay 10
+#define timeCal 1000 // time recorded in ms / timeCal
+#define sutaDelay 5000 //ms
+#define blinkDelay 500 //ms
+#define phaseDelay 10 //ms
+#define anglemin 60 //digrees
+#define anglemax 150 //digrees

@@ -21,15 +21,16 @@ int1 phq, sutadone, okstate, blink;
 void  TIMER0_isr(void) 
 {
    ms++;
+   time++;
 }
-
+/*
 #INT_TIMER2
 void  TIMER2_isr(void) 
 {
    time++;
 }
 
-
+*/
 int readADC(int pin){
    set_adc_channel(pin);
    return read_adc();
@@ -77,7 +78,7 @@ void getPhq(void) {
      pf = pf * 50.0 * 360.0;
      angle1 = pf;
      ms = 0;
-     if(angle1 > 115 && angle1 < 125) {
+     if(angle1 > anglemin && angle1 < anglemax) {
          phq = 1;
       } else {
          phq = 0;
@@ -93,15 +94,19 @@ void runSetup(void) {
    setup_oscillator(OSC_8MHZ);
    setup_adc_ports(sAN0, VSS_VDD);
    setup_adc(ADC_CLOCK_INTERNAL);
-   setup_timer_0(RTCC_INTERNAL|RTCC_DIV_4|RTCC_8_BIT);      //512 us overflow
-   setup_timer_2(T2_DIV_BY_64,195,16);      //6.2 ms overflow, 100 ms interrupt
+   setup_timer_0(RTCC_INTERNAL|RTCC_DIV_8|RTCC_8_BIT);     //1ms //512 us overflow
+   //setup_timer_2(T2_DIV_BY_64,195,16);      //6.2 ms overflow, 100 ms interrupt
 
 
    enable_interrupts(INT_TIMER0);
-   enable_interrupts(INT_TIMER2);
+   //enable_interrupts(INT_TIMER2);
    enable_interrupts(GLOBAL);
+   motor(0);
+   ok(1);
+   fault(0);
    getPhq();
    sutadone = 0;
+   curState = 0;
 }
 
 
@@ -136,25 +141,30 @@ void runSuta(void) {
       timerSuta = time;
    }
 }
-
+/*
 void getPhase(void) {
    if((timerPhase + phaseDelay) <= time){
       getPhq();
    }
 }
-
+*/
 void runNormal(void){
    blink = 0;
    motor(1);
    ok(1);
    fault(0);
+   time = 0;
 }
 
 void doLoop(void){
-      getPhase();
+      getPhq();
       getsutanum();
       okblink();
-      if(sutafinish/2 < sutax){sutadone = 0;}else{sutadone = 1;}
+      if((sutafinish/2) < sutax){
+         sutadone = 0;
+      }else{
+         sutadone = 1;
+      }
       if(sutadone == 0 && phq == 1){
          runSuta();
       } else if (sutadone == 1 && phq == 1){
