@@ -1,0 +1,61 @@
+[PROJECT]
+Target=suta.hex
+Processor_Text=PIC16LF1574
+CCSVerions=5.112
+Compiler=PCM
+CCSVersion=5.112
+[Target Data]
+FileList=suta.c
+[Directories]
+Include=
+[C:\Users\harno\Desktop\pic16lf1574\suta]
+Type=4
+[mru-list]
+1=suta.c
+
+[fileformats]
+forcecoff=0
+
+[ProjectLog]
+Days=1
+D1=28-04-2023
+D1_L=20
+D1_L1=[42568]Project Opened.
+D1_L2=[42579]Started Editing.
+D1_L3=[43040]Stopped Editing.
+TotalEdit=134
+TotalDebug=0
+D1_E=134
+D1_D=0
+D1_L4=[43042]Started Editing.
+D1_L5=[43801]Stopped Editing.
+D1_L6=[43885]Started Editing.
+D1_L7=[44625]Stopped Editing.
+D1_L8=[44700]Started Editing.
+D1_L9=[46736]Stopped Editing.
+D1_L10=[46768]Started Editing.
+D1_L11=[47300]Stopped Editing.
+D1_L12=[47300]Project Closed.
+D1_L13=[53065]Project Opened.
+D1_L14=[53242]Started Editing.
+D1_L15=[53739]Stopped Editing.
+D1_L16=[54041]Started Editing.
+D1_L17=[55242]Stopped Editing.
+D1_L18=[55291]Started Editing.
+D1_L19=[58523]Stopped Editing.
+D1_L20=[58523]Project Closed.
+
+[Opened Files]
+1=suta.c
+t1=117
+2=suta.h
+t2=15
+Count=2
+[suta.c]
+Type=4
+
+[defines]
+buildcount=73
+[Units]
+Count=1
+1=suta (main)

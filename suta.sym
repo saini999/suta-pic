@@ -1,0 +1,152 @@
+004-005 @WRITE_PACKED_MEMORY.P1
+004-005 @READ_PACKED_MEMORY.P2
+004-005 @READ_PROGRAM_MEMORY8.P3
+004-005 @WRITE_PROGRAM_MEMORY8.P4
+006-007 @READ_PACKED_MEMORY.P1
+006-007 @WRITE_PACKED_MEMORY.P2
+020     @INTERRUPT_AREA
+021     @INTERRUPT_AREA
+022     @INTERRUPT_AREA
+023     @INTERRUPT_AREA
+024-025 strtok.save
+026-029 _Randseed
+02A     ms
+02B     sutax
+02C     sutafinish
+02D     curState
+02E-02F time
+030-031 timerSuta
+032-033 timerBlink
+034-035 timerPhase
+036     t1_start
+037     t1_end
+038-03B dif1
+03C     angle1
+03D.0   phq
+03D.1   sutadone
+03D.2   okstate
+03D.3   blink
+03E-041 pf
+042     fault.state
+042-045 @SFTOI.P1
+042     motor.state
+042-045 atan2.y
+042-043 @ITOF.P1
+042-045 @DIVFF.P2
+042     readADC.pin
+042     getsutanum.@SCRATCH1
+042     okblink.@SCRATCH1
+042     runSuta.@SCRATCH1
+042     getPhase.@SCRATCH1
+042     doLoop.@SCRATCH1
+043     ok.state
+043     @DIV88.P1
+043     okblink.@SCRATCH2
+043     runSuta.@SCRATCH2
+043     getPhase.@SCRATCH2
+043     doLoop.@SCRATCH2
+044     @DIV88.P1
+044     getPhq.@SCRATCH1
+045     getPhq.@SCRATCH2
+045     @DIV88.@SCRATCH1
+046-049 @DIVFF.P1
+046-049 atan2.x
+046     getPhq.@SCRATCH3
+047     getPhq.@SCRATCH4
+048-04B @MULFF.P1
+04A-04D atan2.z
+04C-04F @MULFF.P1
+04C     @DIVFF.@SCRATCH1
+04D     @DIVFF.@SCRATCH2
+04E.0   atan2.sign
+04E     @DIVFF.@SCRATCH3
+04F     atan2.quad
+04F     @DIVFF.@SCRATCH4
+050     @DIVFF.@SCRATCH5
+051     @DIVFF.@SCRATCH6
+052     @MULFF.@SCRATCH1
+053     @MULFF.@SCRATCH2
+054     @MULFF.@SCRATCH3
+055     @MULFF.@SCRATCH4
+056     @MULFF.@SCRATCH5
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+111.6   C1OUT
+113.6   C2OUT
+191-192 @WRITE_PROGRAM_MEMORY8.P1
+191-192 @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000027  TIMER0_isr
+00002B  TIMER2_isr
+000031  @MULFF
+0000A6  getPhq
+0000BB  @ITOF
+0000EE  @DIVFF
+0001F5  @SFTOI
+000222  runSetup
+000247  ok
+000255  motor
+000263  fault
+000271  doLoop
+000271  getPhase
+000280  getsutanum
+000281  readADC
+000298  @DIV88
+0002AE  okblink
+0002D9  runSuta
+0002EF  updateState
+000307  runNormal
+000311  stop
+00031B  MAIN
+00031B  @cinit1
+000379  @cinit2
+0135  StrtoulGO
+0135  StrtolGO
+
+Project Directory:
+    C:\Users\harno\Desktop\pic16lf1574\
+
+Project Files:
+    suta.c                                                  [28-Apr-23 16:11  CRC=20BD5F53]
+    suta.h                                                  [28-Apr-23 16:10  CRC=15072F2F]
+    ..\..\..\..\Program Files (x86)\PICC\Devices\16LF1574.h [21-Oct-22 11:03  CRC=89971F74]
+    ..\..\..\..\Program Files (x86)\PICC\Drivers\float.h    [01-Aug-07 16:50  CRC=8BC4079E]
+    ..\..\..\..\Program Files (x86)\PICC\Drivers\math.h     [05-May-20 13:57  CRC=02232397]
+    ..\..\..\..\Program Files (x86)\PICC\Drivers\stdlib.h   [30-Jun-20 14:21  CRC=452E14BB]
+    ..\..\..\..\Program Files (x86)\PICC\Drivers\stddef.h   [30-Jan-19 12:26  CRC=897CEC6C]
+    ..\..\..\..\Program Files (x86)\PICC\Drivers\string.h   [06-Apr-20 08:43  CRC=B1605627]
+    ..\..\..\..\Program Files (x86)\PICC\Drivers\ctype.h    [03-Jan-08 15:55  CRC=2D1F019F]
+    ..\..\..\..\Program Files (x86)\PICC\Drivers\stdio.h    [31-Jul-07 15:24  CRC=4E4534F4]
+
+Source signature=96F79C00
+Program memory checksum=0000
+Hex file CRC=715F
+
+Units:
+    C:\Users\harno\Desktop\pic16lf1574\suta (main)
+
+Compiler Settings:
+    Processor:      PIC16LF1574
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Enhanced 16:    Yes
+    Compile Mode:   CCS5
+
+Output Files:
+    XREF file:   suta.xsym
+    Errors:      suta.err
+    Ext Symbols: suta.esym
+    INHX8:       suta.hex
+    Symbols:     suta.sym
+    List:        suta.lst
+    Debug/COFF:  suta.cof
+    Project:     suta.ccspjt
+    Call Tree:   suta.tre
+    Statistics:  suta.STA
